@@ -4,11 +4,13 @@
             <a href="/" class="brand-logo center">Vjzr</a>
         </nav>
         <time-input :model="times"></time-input>
+        <times :model="times"></times>
     </div>
 </template>
 
 <script>
-    import TimeInput from './components/TimeInput.vue'
+    import TimeInput from './components/TimeInput.vue';
+    import Times from './components/Times.vue';
 
     export default {
         data () {
@@ -17,7 +19,8 @@
             }
         },
         components: {
-            'time-input': TimeInput
+            'time-input': TimeInput,
+            'times': Times
         }
     }
 </script>
