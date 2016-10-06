@@ -36,6 +36,7 @@
                     let matches = this.pattern.exec(this.input);
                     let concatTime = [matches[1], matches[2]].join(':');
                     this.model.push(moment(concatTime, "HH:mm"));
+                    this.model.sort((first, second) => { return first.diff(second); });
                     this.input = '';
                 } else {
                     this.hasError = true;

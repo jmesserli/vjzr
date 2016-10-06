@@ -1,15 +1,19 @@
 <template>
-    <div>
-        <p v-for="pair in pairs">{{pair | json}}</p>
+    <div class="container">
+        <time-card v-for="pair in pairs" :timePair="pair"></time-card>
     </div>
 </template>
 
 <script>
+    import TimeCard from './TimeCard.vue';
+
     export default {
+        components: {
+            'time-card': TimeCard
+        },
         props: ['model'],
         data () {
             return {
-
             }
         },
         computed: {
