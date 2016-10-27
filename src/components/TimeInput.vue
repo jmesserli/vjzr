@@ -17,7 +17,7 @@
         data () {
             return {
                 input: '',
-                pattern: /([01]?\d|2[0-3]):?([0-5]\d)/,
+                pattern: /^([01]?\d|2[0-3]):?([0-5]\d)$/,
                 hasError: false
             }
         },
@@ -45,4 +45,6 @@
         },
         props: ['model']
     }
+
+
 </script>
